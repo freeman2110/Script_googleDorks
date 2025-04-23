@@ -31,7 +31,7 @@ def perform_google_search(api_key: str, search_engine_id: str, query: str, start
         "q": query,
         "start": start,
         "lr": lang,
-        # "dateRestrict": "d1" #Sacar foto a esto
+        # "dateRestrict": "d1" 
     }
 
     try:
@@ -54,7 +54,7 @@ def save_results_to_file(results: List[Dict], filename: str) -> None:
             f.write("-------------------------------\n\n")
     logging.info(f"Resultados guardados en {filename}")
 
-# Lista de Dorks para hacer varias busquedas de manera simultanea(Sacale foto)
+# Lista de Dorks para hacer varias busquedas de manera simultanea
 dorks = [
     'filetype:sql ("password" | "passwd" | "user") -github -stackoverflow',
     'filetype:env ("APP_SECRET" | "DB_PASSWORD" | "API_KEY") -github',
